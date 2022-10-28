@@ -75,7 +75,7 @@ title: Fantasy Football Facts
               like_but.innerHTML = row.like;  
               like_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(like, like_url+row.id, like_but.id);  
+                reaction(LIKE, like_url+row.id, like_but.id);  
               };
               like.appendChild(like_but); 
 
@@ -86,7 +86,7 @@ title: Fantasy Football Facts
               dislike_but.innerHTML = row.dislike;  // add fetched "boohoo count" to innerHTML
               dislike_but.onclick = function () {
                 // onclick function call with "jeer parameters"
-                reaction(dislike, jeer_url+row.id, dislike_but.id);  
+                reaction(DISLIKE, jeer_url+row.id, dislike_but.id);  
               };
               dislike.appendChild(dislike_but);  // add "boohoo button" to boohoo cell
              
@@ -121,9 +121,9 @@ title: Fantasy Football Facts
       response.json().then(data => {
           console.log(data);
           // Likes or Jeers updated/incremented
-          if (type === like) // like data element
+          if (type === LIKE) // like data element
             document.getElementById(elemID).innerHTML = data.like;  // fetched haha data assigned to haha Document Object Model (DOM)
-          else if (type === dislike) // jeer data element
+          else if (type === DISLIKE) // jeer data element
             document.getElementById(elemID).innerHTML = data.dislike;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
           else
             error("unknown type: " + type);  // should never occur
