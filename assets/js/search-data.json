@@ -51,6 +51,22 @@
   
 
   
+      ,"page3": {
+          "title": "Schedule",
+          "content": "Joke HaHa Boohoo .",
+          "url": "https://aaditgupta21.github.io/football-pages/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+
+  
   
 
   
@@ -59,18 +75,13 @@
   
 
   
-
-  
   
 
   
   
 
   
-  
-
-  
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://aaditgupta21.github.io/football-pages/robots.txt",
