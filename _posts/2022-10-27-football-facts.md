@@ -71,7 +71,7 @@ title: Fantasy Football Facts
 
             const like = document.createElement("td");
               const like_but = document.createElement('button');
-              like_but.id = like+row.id   
+              like_but.id = LIKE+row.id   
               like_but.innerHTML = row.like;  
               like_but.onclick = function () {
                 // onclick function call with "like parameters"
@@ -82,7 +82,7 @@ title: Fantasy Football Facts
             // td for boohoo cell with onclick actions
             const dislike = document.createElement("td");
               const dislike_but = document.createElement('button');
-              dislike_but.id = dislike+row.id  // establishes a BOOHOO JS id for cell
+              dislike_but.id = DISLIKE+row.id  // establishes a BOOHOO JS id for cell
               dislike_but.innerHTML = row.dislike;  // add fetched "boohoo count" to innerHTML
               dislike_but.onclick = function () {
                 // onclick function call with "jeer parameters"
