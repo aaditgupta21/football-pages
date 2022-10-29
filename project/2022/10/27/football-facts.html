@@ -116,14 +116,14 @@ window.onload = wrap_img;
   // prepare HTML defined "result" container for new output
   const resultContainer = document.getElementById("result");
 
-  const like = "like";
-  const dislike = "dislike";
+  const LIKE = "like";
+  const DISLIKE = "dislike";
 
   // prepare fetch urls
   const url = "https://football.aadit.dev/api/facts";
   const get_url = url +"/";
-  const like_url = url + "/like/";  
-  const jeer_url = url + "/jeer/";  
+  const like_url = url + "/like/";
+  const jeer_url = url + "/jeer/";
 
   // prepare fetch GET options
   const options = {
@@ -154,31 +154,31 @@ window.onload = wrap_img;
           for (const row of data) {
             // make "tr element" for each "row of data"
             const tr = document.createElement("tr");
-            
+
             const fact = document.createElement("td");
               fact.innerHTML = row.id + ". " + row.fact;  // add fetched data to innerHTML
 
             const like = document.createElement("td");
               const like_but = document.createElement('button');
-              like_but.id = like+row.id   
-              like_but.innerHTML = row.like;  
+              like_but.id = LIKE+row.id
+              like_but.innerHTML = row.like;
               like_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(LIKE, like_url+row.id, like_but.id);  
+                reaction(LIKE, like_url+row.id, like_but.id);
               };
-              like.appendChild(like_but); 
+              like.appendChild(like_but);
 
             // td for boohoo cell with onclick actions
             const dislike = document.createElement("td");
               const dislike_but = document.createElement('button');
-              dislike_but.id = dislike+row.id  // establishes a BOOHOO JS id for cell
+              dislike_but.id = DISLIKE+row.id  // establishes a BOOHOO JS id for cell
               dislike_but.innerHTML = row.dislike;  // add fetched "boohoo count" to innerHTML
               dislike_but.onclick = function () {
                 // onclick function call with "jeer parameters"
-                reaction(DISLIKE, jeer_url+row.id, dislike_but.id);  
+                reaction(DISLIKE, jeer_url+row.id, dislike_but.id);
               };
               dislike.appendChild(dislike_but);  // add "boohoo button" to boohoo cell
-             
+
             // this builds ALL td's (cells) into tr (row) element
             tr.appendChild(fact);
             tr.appendChild(like);
@@ -222,7 +222,7 @@ window.onload = wrap_img;
     .catch(err => {
       error(err + " " + put_url);
     });
-    
+
   }
 
   // Something went wrong with actions or responses
