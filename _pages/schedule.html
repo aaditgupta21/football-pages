@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Schedule
-permalink: /about/
+permalink: /schedule/
 ---
 
 
@@ -65,7 +65,7 @@ permalink: /about/
           for (const row of data) {
             // make "tr element" for each "row of data"
             const tr = document.createElement("tr");
-            
+
             // td for joke cell
             const joke = document.createElement("td");
               joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
@@ -77,7 +77,7 @@ permalink: /about/
               haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
               haha_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(HAHA, like_url+row.id, haha_but.id);  
+                reaction(HAHA, like_url+row.id, haha_but.id);
               };
               haha.appendChild(haha_but);  // add "haha button" to haha cell
 
@@ -88,10 +88,10 @@ permalink: /about/
               boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
               boohoo_but.onclick = function () {
                 // onclick function call with "jeer parameters"
-                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
+                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);
               };
               boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
-             
+
             // this builds ALL td's (cells) into tr (row) element
             tr.appendChild(joke);
             tr.appendChild(haha);
@@ -135,7 +135,7 @@ permalink: /about/
     .catch(err => {
       error(err + " " + put_url);
     });
-    
+
   }
 
   // Something went wrong with actions or responses
