@@ -10,9 +10,9 @@ title: Fantasy Football Facts
 <table>
   <thead>
   <tr>
-    <th>fact</th>
-    <th>like</th>
-    <th>dislike</th>
+    <th>Fact</th>
+    <th>Likes</th>
+    <th>Dislikes</th>
   </tr>
   </thead>
   <tbody id="result">
