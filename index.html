@@ -4,32 +4,28 @@ search_exclude: true
 ---
 
 <body>
-  <div class="container">
-    <video autoplay loop id="background" class="videoPlayer">
-      <source
-        src="https://drive.google.com/uc?export=view&id=1NAyWoJIA8d3SunU8iH2m_9tz2qsHNL3Y"
-        type="video/mp4"
-      />
-    </video>
-  </div>
-
-  <div class="wrapper">
-    <table style="width: 17%; margin-top: 5%; margin-left: 65%">
-      <tr>
+<div id="video_wrapper">
+  <video autoplay loop>
+    <source src="https://drive.google.com/uc?export=view&id=1NAyWoJIA8d3SunU8iH2m_9tz2qsHNL3Y" type="video/mp4">
+  </video>
+</div>
+<table style="width:17%; margin-top: 5%; margin-left: 65%;">
+    <tr>
         <th><h4 style="text-align: center">News</h4></th>
+    </tr>
+</table>
+<table style="width:17%; margin-left: 65%;">
+    <thead>
+      <tr>
+        <th>Article</th>
+        <th>Author</th>
+        <th>url</th>
       </tr>
-    </table>
-    <table style="width: 17%; margin-left: 65%">
-      <thead>
-        <tr>
-          <th>Article</th>
-          <th>Author</th>
-          <th>url</th>
-        </tr>
-      </thead>
-      <tbody id="data"></tbody>
-    </table>
-  </div>
+    </thead>
+    <tbody id="data">
+
+    </tbody>
+  </table>
 
   <script>
     var url =
