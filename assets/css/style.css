@@ -429,7 +429,7 @@ pre code { font-size: 15px !important; }
 /*----- ADD YOUR STYLES BELOW -------*/
 html, input, textarea, select { color: rgba(255, 255, 255, 0.87) !important; background-color: #121212 !important; }
 
-body { color: rgba(255, 255, 255, 0.87) !important; background-color: rgba(0, 0, 0, 0.7) !important; }
+body { color: rgba(255, 255, 255, 0.87) !important; background-color: rgba(0, 0, 0, 0.85) !important; }
 
 a { color: #4bbaff !important; }
 
