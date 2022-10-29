@@ -28,19 +28,8 @@
 
   
       ,"page1": {
-          "title": "About Me",
-          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
-          "url": "https://aaditgupta21.github.io/football-pages/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page2": {
-          "title": "Fantasy Football Facts",
-          "content": "&lt;!DOCTYPE html&gt; . Fantasy Football Facts . NBA Teams . Fact Likes Dislikes . .",
+          "title": "Facts",
+          "content": "&lt;!DOCTYPE html&gt; . Fantasy Football Facts . Fantasy Football Facts . Fact Likes Dislikes . .",
           "url": "https://aaditgupta21.github.io/football-pages/facts",
           "relUrl": "/facts",
           "date": ""
@@ -51,7 +40,29 @@
   
 
   
+      ,"page3": {
+          "title": "League",
+          "content": "&lt;!DOCTYPE html&gt; . Fantasy Football League . Fantasy Football League . .",
+          "url": "https://aaditgupta21.github.io/football-pages/league",
+          "relUrl": "/league",
+          "date": ""
+      }
+      
+  
+
+  
       ,"page4": {
+          "title": "Players",
+          "content": "&lt;!DOCTYPE html&gt; . Fantasy Football Players . Fantasy Football Players . .",
+          "url": "https://aaditgupta21.github.io/football-pages/players",
+          "relUrl": "/players",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page5": {
           "title": "Schedule",
           "content": "Joke HaHa Boohoo .",
           "url": "https://aaditgupta21.github.io/football-pages/schedule/",
@@ -70,6 +81,17 @@
   
 
   
+      ,"page9": {
+          "title": "Standings",
+          "content": "&lt;!DOCTYPE html&gt; . Fantasy Football Standings . Fantasy Football Standings . .",
+          "url": "https://aaditgupta21.github.io/football-pages/standings",
+          "relUrl": "/standings",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -81,7 +103,7 @@
   
 
   
-      ,"page12": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://aaditgupta21.github.io/football-pages/robots.txt",

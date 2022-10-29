@@ -64,7 +64,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/football-pages/about/">About Me</a><a class="page-link" href="/football-pages/facts">Fantasy Football Facts</a><a class="page-link" href="/football-pages/schedule/">Schedule</a><a class="page-link" href="/football-pages/search/">Search</a><a class="page-link" href="/football-pages/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/football-pages/facts">Facts</a><a class="page-link" href="/football-pages/league">League</a><a class="page-link" href="/football-pages/players">Players</a><a class="page-link" href="/football-pages/schedule/">Schedule</a><a class="page-link" href="/football-pages/search/">Search</a><a class="page-link" href="/football-pages/standings">Standings</a><a class="page-link" href="/football-pages/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -209,33 +209,39 @@ right: 0;
     </tbody>
   </table>
 
+  <script>
+    var url =
+      "https://newsapi.org/v2/top-headlines?" +
+      "country=us&" +
+      "category=sports&" +
+      "apiKey=b9ae2634c2e44c1f9f5cad8ae50dcd0d";
 
-<script>
-var url = 'https://newsapi.org/v2/top-headlines?' +
-    'country=us&' +
-    'category=sports&' +
-    'apiKey=b9ae2634c2e44c1f9f5cad8ae50dcd0d';
+    var req = new Request(url);
 
-var req = new Request(url);
+    fetch(req).then(function (response) {
+      response.json().then((data) => {
+        console.log(data);
+        if (data.length > 0) {
+          var temp = "";
+          data.forEach((itemData) => {
+            temp += "<tr>";
+            temp += "<td>" + itemData.name + "</td>";
+            temp += "<td>" + itemData.author + "</td>";
+            temp += "<td>" + itemData.url + "</td></tr>";
+          });
+          document.getElementById("data").innerHTML = temp;
+        }
+      });
+    });
+  </script>
 
-fetch(req)
-        .then(function(response) {
-            response.json().then((data) => {
-              console.log(data);
-              if (data.length > 0) {
-                var temp = "";
-                data.forEach((itemData) => {
-                    temp += "<tr>";
-                    temp += "<td>" + itemData.name + "</td>";
-                    temp += "<td>" + itemData.author + "</td>";
-                    temp += "<td>" + itemData.url + "</td></tr>";
-                });
-                document.getElementById('data').innerHTML = temp;
-                }
-            });
-          })
+  <style>
+    @import url("https://rsms.me/inter/inter.css");
 
-</script>
+    * {
+      font-family: "Inter", sans-serif !important;
+    }
+  </style>
 </body>
 
 
