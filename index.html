@@ -194,53 +194,45 @@ right: 0;
 
             </script>
 <body>
-<div id="video_wrapper">
-  <video autoplay="" loop="">
-    <source src="https://drive.google.com/uc?export=view&amp;id=1NAyWoJIA8d3SunU8iH2m_9tz2qsHNL3Y" type="video/mp4" />
-  </video>
-</div>
-<table style="width:17%; margin-top: 5%; margin-left: 65%;">
+  <div id="video_wrapper">
+    <video autoplay="" loop="">
+      <source src="https://drive.google.com/uc?export=view&amp;id=1NAyWoJIA8d3SunU8iH2m_9tz2qsHNL3Y" type="video/mp4" />
+    </video>
+  </div>
+  <table style="width: 17%; margin-top: 5%; margin-left: 65%">
     <tr>
-        <th><h4 style="text-align: center">News</h4></th>
+      <th><h4 style="text-align: center">News</h4></th>
     </tr>
-</table>
-<table style="width:17%; margin-left: 65%;">
+  </table>
+  <table class="news" style="width: 17%; margin-left: 65%">
     <thead>
       <tr>
         <th>Article</th>
         <th>Author</th>
-        <th>url</th>
+        <th>URL</th>
       </tr>
     </thead>
-    <tbody id="data">
-
-    </tbody>
+    <tbody id="data"></tbody>
   </table>
 
   <script>
-    var url =
-      "https://newsapi.org/v2/top-headlines?" +
-      "country=us&" +
-      "category=sports&" +
-      "apiKey=b9ae2634c2e44c1f9f5cad8ae50dcd0d";
+    const news = document.querySelector(".news");
 
-    var req = new Request(url);
-
-    fetch(req).then(function (response) {
-      response.json().then((data) => {
-        console.log(data);
-        if (data.length > 0) {
-          var temp = "";
-          data.forEach((itemData) => {
-            temp += "<tr>";
-            temp += "<td>" + itemData.name + "</td>";
-            temp += "<td>" + itemData.author + "</td>";
-            temp += "<td>" + itemData.url + "</td></tr>";
-          });
-          document.getElementById("data").innerHTML = temp;
-        }
+    fetch(
+      "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=b9ae2634c2e44c1f9f5cad8ae50dcd0d"
+    )
+      .then((articles) => articles.json())
+      .then((articles) => {
+        console.log(articles);
+        articles.articles.forEach((articles) => {
+          news.innerHTML += `
+  <tr>
+    <td>${articles.title}</td>
+      <td>${articles.author}</td>
+      <td>${articles.url}</td>
+  </tr>`;
+        });
       });
-    });
   </script>
 
   <style>
