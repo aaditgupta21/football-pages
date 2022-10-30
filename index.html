@@ -210,10 +210,18 @@ right: 0;
 
 <div class="wrapper">
 <div class="home">
-  <table>
+  <div id="light">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+  <video id="VisaChipCardVideo" width="600" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      <!--Browser does not support <video> tag -->
+    </video>
+</div>
+<div id="fade" onClick="lightbox_close();"></div>
+<table>
             <tr>
                 <td><a class="nav-link" href="/football-pages/"><button class="button" style="vertical-align:middle"><span>Home</span></button></a></td>
-                <td><button class="button" style="vertical-align:middle"><span>Standings</span></button></td>
+                <td><div><a href="#" onclick="lightbox_open();"><button class="button" style="vertical-align:middle"><span>Watch video</span></button></a></div></td>
                 <td><button class="button" style="vertical-align:middle"><span>Facts</span></button></td>
                 <td><div id="digital-clock"></div></td>
                 <td><input style=" border-radius: 30px;" id="search" type="search" placeholder="Search" aria-label="Search"></td>
