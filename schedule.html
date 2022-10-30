@@ -109,7 +109,7 @@ window.onload = wrap_img;
       const DISLIKE = "dislike";
 
       // prepare fetch urls
-      const url = "https://football.aadit.dev/api/schedule";
+      const url = "https://football.aadit.dev/schedule";
       const get_url = url + "/";
       const like_url = url + "/like/";
       const jeer_url = url + "/jeer/";
@@ -145,8 +145,25 @@ window.onload = wrap_img;
               const tr = document.createElement("tr");
 
               const fact = document.createElement("td");
-              fact.innerHTML = row.id + ". " + row.fact; // add fetched data to innerHTML
+              fact.innerHTML = row.fact; // add fetched data to innerHTML
 
+              const date = document.createElement("td");
+              date.innerHTML = row.date;
+
+              const homeTeam = document.createElement("td");
+              homeTeam.innerHTML = row.homeTeam.name;
+
+              const awayTeam = document.createElement("td");
+              awayTeam.innerHTML = row.awayTeam.name;
+
+              const homeTeamS = document.createElement("td");
+              homeTeamS.innerHTML = row.homeTeam.score;
+
+              const awayTeamS = document.createElement("td");
+              awayTeamS.innerHTML = row.awayTeam.score;
+
+
+              
               const like = document.createElement("td");
               const like_but = document.createElement("button");
               like_but.id = LIKE + row.id;
