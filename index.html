@@ -262,11 +262,11 @@ right: 0;
 
             </script>
 <body>
-<div id="video_wrapper">
-  <video autoplay="" loop="">
-    <source src="https://drive.google.com/uc?export=view&amp;id=1NAyWoJIA8d3SunU8iH2m_9tz2qsHNL3Y" type="video/mp4" />
-  </video>
-</div>
+  <div id="video_wrapper">
+    <video autoplay="" loop="">
+      <source src="https://drive.google.com/uc?export=view&amp;id=1NAyWoJIA8d3SunU8iH2m_9tz2qsHNL3Y" type="video/mp4" />
+    </video>
+  </div>
   <table style="width: 17%; margin-top: 5%; margin-left: 65%">
     <tr>
       <th><h4 style="text-align: center">News</h4></th>
@@ -275,8 +275,8 @@ right: 0;
   <table class="news" style="width: 17%; margin-left: 65%">
     <thead>
       <tr>
-        <th>Article</th>
         <th>Author</th>
+        <th>Article</th>
         <th>URL</th>
       </tr>
     </thead>
@@ -286,18 +286,16 @@ right: 0;
   <script>
     const news = document.querySelector(".news");
 
-    fetch(
-      "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=b9ae2634c2e44c1f9f5cad8ae50dcd0d"
-    )
-      .then((articles) => articles.json())
-      .then((articles) => {
-        console.log(articles);
-        articles.articles.forEach((articles) => {
+    fetch("https://football.aadit.dev/api/news")
+      .then((results) => results.json())
+      .then((results) => {
+        console.log(results);
+        results.results.forEach((results) => {
           news.innerHTML += `
   <tr>
-    <td>${articles.title}</td>
-      <td>${articles.author}</td>
-      <td>${articles.url}</td>
+    <td>${results.creator[0]}</td>
+    <td>${results.title}</td>
+    <td><a target="_blank" href="${results.link}">Link</a></td>
   </tr>`;
         });
       });
