@@ -455,7 +455,7 @@ pre, code { border-color: #333333; background-color: #1e1e1e; }
 
 table th { border-color: #333333; color: rgba(255, 255, 255, 0.87); }
 
-table td { border-color: #333333; color: rgba(255, 255, 255, 0.69); }
+table td { background-color: #121212; border-color: #333333; color: rgba(255, 255, 255, 0.69); }
 
 .flash { color: #121212 !important; filter: brightness(80%); }
 
