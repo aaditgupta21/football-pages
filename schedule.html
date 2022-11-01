@@ -144,8 +144,8 @@ window.onload = wrap_img;
               // make "tr element" for each "row of data"
               const tr = document.createElement("tr");
 
-              const fact = document.createElement("td");
-              fact.innerHTML = row.fact; // add fetched data to innerHTML
+              const venue = document.createElement("td");
+              venue.innerHTML = row.venue; // add fetched data to innerHTML
 
               const date = document.createElement("td");
               date.innerHTML = row.date;
@@ -186,9 +186,14 @@ window.onload = wrap_img;
               dislike.appendChild(dislike_but); // add "boohoo button" to boohoo cell
 
               // this builds ALL td's (cells) into tr (row) element
-              tr.appendChild(fact);
-              tr.appendChild(like);
-              tr.appendChild(dislike);
+              tr.appendChild(venue);
+              tr.appendChild(date);
+              tr.appendChild(homeTeam);
+              tr.appendChild(awayTeam);
+              tr.appendChild(homeTeamS);
+              tr.appendChild(awayTeamS);
+
+              
 
               // this adds all the tr (row) work above to the HTML "result" container
               resultContainer.appendChild(tr);
