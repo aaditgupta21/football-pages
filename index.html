@@ -12,15 +12,24 @@ search_exclude: false
       />
     </video>
   </div>
-  <img style="width: 800px; height: auto; margin-top: 3%; margin-left: 3%; border-radius: 5px;
-    box-shadow: 7px 7px 7px #666666;" src="images/football.png" alt="football">
+  
+  <table style="width: 40%; margin-top: 5%; margin-left: 3%;">
+      <tr>
+      <th><a href="#" onclick='show(1);'>img</a></th>
+      </tr>
+      <tr>
+        <th><img id="show1" style="width: 800px; height: auto; margin-top: 3%; margin-left: 3%; border-radius: 5px;
+    box-shadow: 7px 7px 7px #666666;" src="images/football.png" alt="football"></th>
+      </tr>
+  </table>
+  
   <table class="news" style="width: 17%; margin-top: 5%; margin-left: 65%">
     <thead>
       <th><h4 style="text-align: center">News</h4></th>
       <tr>
-        <th>Author</th>
-        <th>Article</th>
-        <th>URL</th>
+        <td>Author</td>
+        <td>Article</td>
+        <td>URL</td>
       </tr>
     </thead>
     <tbody id="data"></tbody>
