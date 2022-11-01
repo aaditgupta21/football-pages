@@ -66,12 +66,12 @@ pre, code {
 }
 
 table th{
+    background-color: $dark-grey;
     border-color: $overlay-light;
     color: $high-emph;
 }
 
 table td{
-    background-color: $dark-grey;
     border-color: $overlay-light;
     color: $med-emph;
 }
