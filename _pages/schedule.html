@@ -88,14 +88,17 @@ title: Schedule
               const homeTeam = document.createElement("td");
               homeTeam.innerHTML = row.homeTeam.name;
 
-              const awayTeam = document.createElement("td");
-              awayTeam.innerHTML = row.awayTeam.name;
-
               const homeTeamS = document.createElement("td");
-              homeTeamS.innerHTML = row.homeTeam.score;
+              homeTeamS.innerHTML = row.homeTeam.score;  
+              
+              const blank = document.createElement("td");
+              blank.innerHTML = "----";
 
               const awayTeamS = document.createElement("td");
               awayTeamS.innerHTML = row.awayTeam.score;
+
+              const awayTeam = document.createElement("td");
+              awayTeam.innerHTML = row.awayTeam.name;
 
 
               
@@ -124,9 +127,10 @@ title: Schedule
               tr.appendChild(venue);
               tr.appendChild(date);
               tr.appendChild(homeTeam);
-              tr.appendChild(awayTeam);
               tr.appendChild(homeTeamS);
+              tr.appendChild(blank)
               tr.appendChild(awayTeamS);
+              tr.appendChild(awayTeam);
 
               
 
