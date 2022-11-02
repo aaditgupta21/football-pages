@@ -82,6 +82,32 @@ window.onload = wrap_img;
       Fantasy Football
       <span style="color: #ff5e5e !important; font-weight: bold">Standings</span>
     </h1>
+    <table class="teams" border="1">
+      <tr>
+        <th>Team Name</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Win Rate</th>
+      </tr>
+    </table>
+     <script type="text/javascript">
+      const teams = document.querySelector(".teams");
+
+      fetch("https://football.aadit.dev/api/standings")
+        .then((data) => data.json())
+        .then((data) => {
+          console.log(data);
+          data._embedded.teamWinStatsList.forEach((stat) => {
+            teams.innerHTML += `
+        <tr>
+          <td>${stat.name}</td>
+            <td>${stat.wins}</td>
+            <td>${stat.losses}</td>
+            <td>${stat.winRatePercentage}</td>
+        </tr>`;
+          });
+        });
+    </script>
 
     <style>
       @import url("https://rsms.me/inter/inter.css");
