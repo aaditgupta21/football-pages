@@ -32,7 +32,7 @@ title: Standings
         .then((data) => data.json())
         .then((data) => {
           console.log(data);
-          data._embedded.teamWinStatsList.forEach((stat) => {
+          data._embedded.teamWinStatsList.reverse().forEach((stat) => {
             teams.innerHTML += `
         <tr>
           <td>${stat.name}</td>
