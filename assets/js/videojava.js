@@ -81,10 +81,13 @@ function lightbox_close() {
 }
 
 function show(nr) {
-    if(style.display="block") {
+    var showimg = 0;
+    if(showimg == 1) {
         document.getElementById("show"+nr).style.display="none";
+        showimg += 1;
     }
-    if(style.display="none") {
+    if(showimg == 0) {
         document.getElementById("show"+nr).style.display="block";
+        showimg -= 1;
     }
 }
