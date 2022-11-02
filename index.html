@@ -362,7 +362,7 @@ input:checked + .slider:before {
       .then((results) => results.json())
       .then((results) => {
         console.log(results);
-        results.results.reverse().forEach((results) => {
+        results.results.forEach((results) => {
           news.innerHTML += `
   <tr>
     <td>${results.creator[0]}</td>
