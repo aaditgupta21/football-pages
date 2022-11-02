@@ -80,9 +80,14 @@ function lightbox_close() {
   lightBoxVideo.pause();
 }
 
-
+var showimg = 0;
 function show(nr) {
-    document.getElementById("show1").style.display="none";
-    document.getElementById("show2").style.display="none";
-    document.getElementById("show"+nr).style.display="block";
+    if(showimg == 0) {
+        document.getElementById("show"+nr).style.display="none";
+        showing += 1;
+    }
+    if(showimg == 1) {
+        document.getElementById("show"+nr).style.display="block";
+        showing -= 1;
+    }
 }
