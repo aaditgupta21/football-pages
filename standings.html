@@ -100,7 +100,7 @@ window.onload = wrap_img;
           data._embedded.teamWinStatsList.reverse().forEach((stat) => {
             teams.innerHTML += `
         <tr>
-          <td>${stat.name}</td>
+          <td style="text-align: center; font-weight: bold;">${stat.name}</td>
             <td>${stat.wins}</td>
             <td>${stat.losses}</td>
             <td>${stat.winRatePercentage}</td>
