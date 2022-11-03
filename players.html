@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Schedule | Fantasy Football</title>
+<title>Players | Fantasy Football</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Schedule" />
+<meta property="og:title" content="Players" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://aaditgupta21.github.io/football-pages/schedule" />
-<meta property="og:url" content="https://aaditgupta21.github.io/football-pages/schedule" />
+<link rel="canonical" href="https://aaditgupta21.github.io/football-pages/players" />
+<meta property="og:url" content="https://aaditgupta21.github.io/football-pages/players" />
 <meta property="og:site_name" content="Fantasy Football" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Schedule" />
+<meta property="twitter:title" content="Players" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Schedule","url":"https://aaditgupta21.github.io/football-pages/schedule"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Players","url":"https://aaditgupta21.github.io/football-pages/players"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/football-pages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aaditgupta21.github.io/football-pages/feed.xml" title="Fantasy Football" /><link rel="shortcut icon" type="image/x-icon" href="/football-pages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -70,145 +70,28 @@ window.onload = wrap_img;
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Football Schedule</title>
-    <meta name="description" content="NBA Teams and their Information." />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Football Players</title>
   </head>
   <body>
     <h1 style="text-align: center; font-size: 50px">
       Fantasy Football
-      <span style="color: #ff5e5e !important; font-weight: bold">Schedule</span>
+      <span style="color: #ff5e5e !important; font-weight: bold">Players</span>
     </h1>
 
-    <!-- HTML table fragment for page -->
-    <table>
-      <thead>
-        <tr>
-          <th>Stadium</th>
-          <th>Date</th>
-          <th>Home Team</th>
-          <th> ---- </th>
-          <th>Score</th>
-          <th> ---- </th>
-          <th>Away Team</th>
-        </tr>
-      </thead>
-      <tbody id="result">
-        <!-- javascript generated data -->
-      </tbody>
-    </table>
-
-    <!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
-    <script>
-      // prepare HTML defined "result" container for new output
-      const resultContainer = document.getElementById("result");
-
-      // prepare fetch urls
-      const url = "https://football.aadit.dev/api/schedule";
-      const get_url = url + "/";
-
-      // prepare fetch GET options
-      const options = {
-        method: "GET", // *GET, POST, PUT, DELETE, etc.
-        mode: "cors", // no-cors, *cors, same-origin
-        cache: "default", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "same-origin", // include, same-origin, omit
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-      };
-      // prepare fetch PUT options, clones with JS Spread Operator (...)
-      const put_options = { ...options, method: "PUT" }; // clones and replaces method
-
-      // fetch the API
-      fetch(get_url, options)
-        // response is a RESTful "promise" on any successful fetch
-        .then((response) => {
-          // check for response errors
-          if (response.status !== 200) {
-            error("GET API response failure: " + response.status);
-            return;
-          }
-          // valid response will have JSON data
-          response.json().then((data) => {
-            console.log(data);
-            for (const row of data.data) {
-              // make "tr element" for each "row of data"
-              const tr = document.createElement("tr");
-
-              const venue = document.createElement("td");
-              venue.innerHTML = row.venue; // add fetched data to innerHTML
-
-              const date = document.createElement("td");
-              date.innerHTML = row.date;
-
-              const homeTeam = document.createElement("td");
-              homeTeam.innerHTML = row.homeTeam.name;
-
-              const homeTeamS = document.createElement("td");
-              homeTeamS.innerHTML = row.homeTeam.score;  
-              
-              const blank = document.createElement("td");
-              blank.innerHTML = "----";
-
-              const awayTeamS = document.createElement("td");
-              awayTeamS.innerHTML = row.awayTeam.score;
-
-              const awayTeam = document.createElement("td");
-              awayTeam.innerHTML = row.awayTeam.name;
-              
-              // this builds ALL td's (cells) into tr (row) element
-              tr.appendChild(venue);
-              tr.appendChild(date);
-              tr.appendChild(homeTeam);
-              tr.appendChild(homeTeamS);
-              tr.appendChild(blank)
-              tr.appendChild(awayTeamS);
-              tr.appendChild(awayTeam);
-
-              // this adds all the tr (row) work above to the HTML "result" container
-              resultContainer.appendChild(tr);
-            }
-          });
-        })
-        // catch fetch errors (ie Nginx ACCESS to server blocked)
-        .catch((err) => {
-          error(err + " " + get_url);
-        });
-
-
-      // Something went wrong with actions or responses
-      function error(err) {
-        // log as Error in console
-        console.error(err);
-        // append error to resultContainer
-        const tr = document.createElement("tr");
-        const td = document.createElement("td");
-        td.innerHTML = err;
-        tr.appendChild(td);
-        resultContainer.appendChild(tr);
-      }
-    </script>
-
-    <style type="text/css">
+    <style>
       @import url("https://rsms.me/inter/inter.css");
 
       * {
         font-family: "Inter", sans-serif !important;
       }
-
-      table {
-        margin: 0 auto;
-        width: 90%;
-        text-align: center;
-      }
     </style>
   </body>
 </html>
-
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/football-pages/"></data>
