@@ -200,27 +200,44 @@ input:checked + .slider:before {
 
 }
     
-.scroll {
-border: none;
-padding: 5px;
-font: 24px/36px sans-serif;
-width: 200px;
-height: 200px;
-overflow: scroll;
-}
-::-webkit-scrollbar {
-width: 12px;
-height: 12px;
-}
-::-webkit-scrollbar-track {
-border: 1px solid yellowgreen;
-border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-background: yellowgreen;
-border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-background: #88ba1c;
-}
+table.scrolldown {
+              
+            /* border-collapse: collapse; */
+            border-spacing: 0;
+            border: 2px solid black;
+        }
+          
+        /* To display the block as level element */
+        table.scrolldown tbody, table.scrolldown thead {
+            display: block;
+        } 
+          
+        thead tr th {
+            height: 40px; 
+            line-height: 40px;
+        }
+          
+        table.scrolldown tbody {
+              
+            /* Set the height of table body */
+            height: 50px; 
+              
+            /* Set vertical scroll */
+            overflow-y: auto;
+              
+            /* Hide the horizontal scroll */
+            overflow-x: hidden; 
+        }
+          
+        tbody { 
+            border-top: 2px solid black;
+        }
+          
+        tbody td, thead th {
+            width : 200px;
+            border-right: 2px solid black;
+        }
+        td {
+            text-align:center;
+        }
 </style>
