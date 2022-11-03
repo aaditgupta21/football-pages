@@ -28,17 +28,6 @@
 
   
       ,"page3": {
-          "title": "Players",
-          "content": "&lt;!DOCTYPE html&gt; . Fantasy Football Players . Fantasy Football Players . .",
-          "url": "https://aaditgupta21.github.io/football-pages/players",
-          "relUrl": "/players",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page4": {
           "title": "Schedule",
           "content": "&lt;!DOCTYPE html&gt; . Football Schedule . Fantasy Football Schedule . Stadium Date Home Team - Score - Away Team . .",
           "url": "https://aaditgupta21.github.io/football-pages/schedule",
@@ -57,7 +46,7 @@
   
 
   
-      ,"page8": {
+      ,"page7": {
           "title": "Standings",
           "content": "&lt;!DOCTYPE html&gt; . Fantasy Football Standings . Fantasy Football Standings . Team Name Wins Losses Win Rate . .",
           "url": "https://aaditgupta21.github.io/football-pages/standings",
@@ -68,8 +57,6 @@
   
 
   
-
-  
   
 
   
@@ -79,7 +66,7 @@
   
 
   
-      ,"page13": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://aaditgupta21.github.io/football-pages/robots.txt",
