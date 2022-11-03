@@ -354,14 +354,14 @@ input:checked + .slider:before {
     </video>
   </div>
   
-<div style="postion: relative; left: 100px; height: 100px; width: 450px; overflow-y: scroll;" id="show1">
-  <table style="width: 25%; margin-top: 3%; position: fixed; height: 100px;">
+<div id="show1">
+  <table style="width: 25%; margin-top: 3%; position: fixed;">
       <tr>
         <th><img style="width: 800px; height: auto; border-radius: 5px;
     box-shadow: 7px 7px 7px #666666;" src="images/football.png" alt="football" /></th>
       </tr>
   </table>
-  
+  <div style="postion: relative; left: 100px; height: 100px; width: 450px; overflow-y: scroll;">
   <table class="news" style="width: 25%; margin-left: 30%; position: fixed;">
     <thead>
       <tr>
@@ -372,6 +372,7 @@ input:checked + .slider:before {
     </thead>
     <tbody id="data"></tbody>
   </table>
+  </div>
   </div>
   <script>
     const news = document.querySelector(".news");
