@@ -109,7 +109,7 @@ function displayNextImage() {
           }
 
           var images = [], x = -1;
-          images[0] = "images/football1.png";
+          images[0] = "images/football.png";
           images[1] = "images/football2.jpg";
           images[2] = "images/football3.jpg";
           images[3] = "images/football4.jpg";
