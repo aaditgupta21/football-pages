@@ -92,12 +92,13 @@ window.onload = wrap_img;
     </table>
      <script type="text/javascript">
       const teams = document.querySelector(".teams");
-
+       // get JSON data from backend //
       fetch("https://football.aadit.dev/api/standings")
         .then((data) => data.json())
         .then((data) => {
           console.log(data);
           data._embedded.teamWinStatsList.reverse().forEach((stat) => {
+             // taking first JSON block and making a row in standings class table //
             teams.innerHTML += `
         <tr>
           <td style="text-align: center; font-weight: bold;">${stat.name}</td>
