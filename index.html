@@ -375,12 +375,13 @@ th, td {
   </div>
   <script>
     const news = document.querySelector(".news");
-
+    // get JSON data from backend //
     fetch("https://football.aadit.dev/api/news")
       .then((results) => results.json())
       .then((results) => {
         console.log(results);
         results.results.forEach((results) => {
+          // taking first JSON block and making a row in news class table //
           news.innerHTML += `
   <tr>
     <td>${results.creator[0]}</td>
