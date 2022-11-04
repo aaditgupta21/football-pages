@@ -17,7 +17,7 @@ title: Schedule
       <span style="color: #ff5e5e !important; font-weight: bold">Schedule</span>
     </h1>
 
-    <!-- HTML table fragment for page -->
+    <!-- HTML table fragment for page and building table header-->
     <table>
       <thead>
         <tr>
@@ -75,7 +75,7 @@ title: Schedule
               const tr = document.createElement("tr");
 
               const venue = document.createElement("td");
-              venue.innerHTML = row.venue; // add fetched data to innerHTML
+              venue.innerHTML = row.venue; // add fetched data to innerHTML for all columns
 
               const date = document.createElement("td");
               date.innerHTML = row.date;
